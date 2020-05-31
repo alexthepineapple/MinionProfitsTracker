@@ -21,7 +21,7 @@ with open(join("Resources","merchantSellValues.json"), 'r') as file:
 # So a level 5 minion has lvl=4
 # (Note: you can set max level by setting lvl=-1)
 lvl = -1 if len(sys.argv) == 1 else int(sys.argv[1]) - 1  # Max level
-print(f"Minion lvl {lvl+1 if lvl>0 else 11}")
+print(f"Minion lvl {lvl+1 if lvl>=0 else 11}")
 
 ### Fuel Multiplier Setup
 fuel = 1.25 # Ench Lava Bucket
@@ -142,7 +142,7 @@ ax.bar(newKeys[1], 0, color=c4, label="Base Merchant")
 ### Figure Settings
 ax.set_ylabel("Profit/h")
 plt.legend(title="Types and Place Sold")
-plt.title(f"Profit / hour / minion | Lava Bucket | Minion lvl {lvl+1 if lvl>0 else 11} \n Bazaar prices updated on {prices['time']} CEST", pad=-10, fontsize=13)
+plt.title(f"Profit / hour / minion | Lava Bucket | Minion lvl {lvl+1 if lvl>=0 else 11} \n Bazaar prices updated on {prices['time']} CEST", pad=-10, fontsize=13)
 
 # mplstyle setting ported into code (I use custom .mplsytle files to make this easier usually)
 ax.spines['right'].set_visible(False)
@@ -160,5 +160,5 @@ fig.patch.set_facecolor(bg)
 ax.set_facecolor(bg)
 
 fig.set_size_inches(20, 5)
-fig.savefig(f'Raw Figs\TypesLvl{lvl+1 if lvl>0 else "Max"}.png', dpi=300, facecolor=bg, edgecolor=bg)
+fig.savefig(f'Raw Figs\TypesLvl{lvl+1 if lvl>=0 else "Max"}.png', dpi=300, facecolor=bg, edgecolor=bg)
 plt.show()
