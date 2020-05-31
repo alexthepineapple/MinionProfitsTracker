@@ -110,7 +110,7 @@ ax.bar(newKeys[1], 0, color=c5, label="Lava Bucket")
 ### Figure Settings
 ax.set_ylabel("Profit/h")
 plt.legend(title="Fuels")
-plt.title(f"Profit / hour / minion | Ench items sold | Minion lvl {lvl+1 if lvl>=0 else 11} \n Bazaar prices updated on {prices['time']} CEST", pad=-10, fontsize=13)
+plt.title(f"Profit / hour / minion | Ench items sold | Minion lvl {lvl+1 if lvl>=0 else 11} \n Bazaar prices updated on {prices['time']} CEST", fontsize=13)
 
 # mplstyle setting ported into code (I use custom .mplsytle files to make this easier usually)
 ax.spines['right'].set_visible(False)

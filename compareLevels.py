@@ -97,7 +97,7 @@ plt.ylim(bottom=0)
 plt.xlim(left=0.9, right=11.5)
 plt.tick_params(axis="both", bottom=False, left=False)
 plt.xlabel("Minion Level")
-plt.title(f"Minion Rank based on profit/hour (top is best) | Lava Bucket \n Bazaar prices updated on {prices['time']} CEST", pad=-10, fontsize=13)
+plt.title(f"Minion Rank based on profit/hour (top is best) | Lava Bucket \n Bazaar prices updated on {prices['time']} CEST", fontsize=13)
 
 # mplstyle setting ported into code (I use custom .mplsytle files to make this easier usually)
 ax.spines['right'].set_visible(False)
